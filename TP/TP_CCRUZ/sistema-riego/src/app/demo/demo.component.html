@@ -1,0 +1,29 @@
+
+
+<p>
+  <input type="text"
+         [(ngModel)]="newDevice" >
+  {{ newDevice}}
+</p>
+
+
+<p>
+  <input type="text" [(ngModel)]="analogRead">
+  {{analogRead|exponential}}
+</p>
+
+<div *ngIf="newDevice==='cesar'">
+
+  {{title}}
+
+</div>
+
+<button (click)="addDevice()">Add device</button>
+
+<ul>
+  <li *ngIf="devicesTest.length===0">there is no devices</li>
+  <li *ngFor="let device of devicesTest; index as i" >
+    {{device}}
+    <button (click)="deleteDevice(i)">delete</button>
+  </li>
+</ul>

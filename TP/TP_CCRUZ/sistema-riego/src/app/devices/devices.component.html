@@ -1,0 +1,11 @@
+<app-header> </app-header>
+
+<div>
+  <!--recibimos el ID en $event-->
+  <app-device
+    *ngFor="let device of devices"
+    (clickedDevice)="clickDevice($event)"
+    [device]="device">
+  </app-device>
+
+</div>
