@@ -5,9 +5,10 @@
   <img [src]="device.icon" [alt]="device.name">
 </h3>
 
-<strong>   {{ device.location }} </strong>
+<strong>  {{ device.location }} </strong>
 <p>{{device.description | slice:0:19}}</p>
-<button (click)="enterDevice()"> Consultar </button>
+<!--<button (click)="enterDevice()"> Consultar </button>-->
+<button [routerLink]="['/devices', device.id]" >Ver detalle</button>
 
 
 

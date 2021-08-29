@@ -1,12 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import {Device} from "./device.model";
+import { Injectable } from '@angular/core';
+import {Device} from "./devices/device.model";
 
-@Component({
-  selector: 'app-devices',
-  templateUrl: './devices.component.html',
-  styleUrls: ['./devices.component.scss']
+@Injectable({
+  providedIn: 'root'
 })
-export class DevicesComponent implements OnInit {
+export class DevicesService {
 
   devices:Device[] =[
     { id:'1',
@@ -16,15 +14,12 @@ export class DevicesComponent implements OnInit {
       icon: "image address",
       description:"this divice is for..."
     },
-
     { id:'2',
       name:"Sensor 2" ,
       location:"Cocina" ,
       electrovalvulaId:2,
       icon: "image address",
       description:"this divice is for..."
-
-
     },
     { id:'3',
       name:"Sensor 3",
@@ -32,7 +27,6 @@ export class DevicesComponent implements OnInit {
       electrovalvulaId:3,
       icon: "image address",
       description:"this divice is for..."
-
     },
     { id:'4',
       name:"Sensor 4",
@@ -45,11 +39,11 @@ export class DevicesComponent implements OnInit {
   ]
   constructor() { }
 
-  ngOnInit(): void {
+  getAllDevices(){
+    return this.devices;
   }
-  clickDevice(id:number){
-    console.log("Device ID");
-    console.log(id);
+  getDevice(id:string){
+    return this.devices.find(item=> id === item.id);
   }
 
 }

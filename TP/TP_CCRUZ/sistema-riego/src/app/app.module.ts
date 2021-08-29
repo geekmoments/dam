@@ -15,7 +15,9 @@ import { DemoComponent } from './demo/demo.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DeviceDetailComponent } from './device-detail/device-detail.component';
+import { LayoutComponent } from './layout/layout.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HeaderComponent,
     FooterComponent,
     BannerComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DeviceDetailComponent,
+    LayoutComponent
 
   ],
     imports: [

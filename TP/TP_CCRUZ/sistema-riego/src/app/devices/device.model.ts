@@ -1,6 +1,6 @@
 export interface Device{
 
-  deviceId:Number;
+  id:string;
   name:string;
   location:string;
   electrovalvulaId:number;

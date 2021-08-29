@@ -52,7 +52,7 @@ export class DeviceComponent implements DoCheck, OnInit,OnDestroy{
 
   enterDevice() {
     console.log('enter to Device');
-    this.clickedDevice.emit(this.device.deviceId); //emitimos el id
+    this.clickedDevice.emit(this.device.id); //emitimos el id
 
   }
 
