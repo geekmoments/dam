@@ -1,10 +1,20 @@
-
+<!--
 <div>
-  <!--recibimos el ID en $event-->
+  recibimos el ID en $event
   <app-device
     *ngFor="let device of devices"
     (clickedDevice)="clickDevice($event)"
     [device]="device">
   </app-device>
 
-</div>
+</div>-->
+<!-- Item Inset Lines -->
+
+
+
+  <app-device
+    *ngFor="let device of devices"
+    (clickedDevice)="clickDevice($event)"
+    [device]="device">
+  </app-device>
+

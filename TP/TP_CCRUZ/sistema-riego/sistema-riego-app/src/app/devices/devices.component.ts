@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Device} from "./device.model";
+import {Device} from './device.model';
 
 @Component({
   selector: 'app-devices',
@@ -8,47 +8,47 @@ import {Device} from "./device.model";
 })
 export class DevicesComponent implements OnInit {
 
-  devices:Device[] =[
+  devices: Device[] =[
     { id:'1',
-      name: "Sensor 1" ,
-      location:"Patio" ,
+      name: 'Sensor 1' ,
+      location:'Patio' ,
       electrovalvulaId:1,
-      icon: "image address",
-      description:"this divice is for..."
+      icon: 'assets/img/imagen1.png',
+      description:'this divice is for...'
     },
 
     { id:'2',
-      name:"Sensor 2" ,
-      location:"Cocina" ,
+      name:'Sensor 2' ,
+      location:'Cocina' ,
       electrovalvulaId:2,
-      icon: "image address",
-      description:"this divice is for..."
+      icon: 'assets/img/imagen2.png',
+      description:'this divice is for...'
 
 
     },
     { id:'3',
-      name:"Sensor 3",
-      location:"Jardin Delantero",
+      name:'Sensor 3',
+      location:'Jardin Delantero',
       electrovalvulaId:3,
-      icon: "image address",
-      description:"this divice is for..."
+      icon: 'assets/img/imagen1.png',
+      description:'this divice is for...'
 
     },
     { id:'4',
-      name:"Sensor 4",
-      location:"Living",
+      name:'Sensor 4',
+      location:'Living',
       electrovalvulaId:4,
-      icon: "image address",
-      description:"this divice is for..."
+      icon: 'assets/img/imagen2.png',
+      description:'this divice is for...'
     }
 
-  ]
+  ];
   constructor() { }
 
   ngOnInit(): void {
   }
-  clickDevice(id:number){
-    console.log("Device ID");
+  clickDevice(id: number){
+    console.log('Device ID');
     console.log(id);
   }
 

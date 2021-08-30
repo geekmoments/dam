@@ -1,5 +1,5 @@
 
-
+<!--
 <h3 >
   {{ device.name | uppercase}}
   <img [src]="device.icon" [alt]="device.name">
@@ -7,9 +7,15 @@
 
 <strong>  {{ device.location }} </strong>
 <p>{{device.description | slice:0:19}}</p>
-<!--<button (click)="enterDevice()"> Consultar </button>-->
 <button [routerLink]="['/devices', device.id]" >Ver detalle</button>
-
-
-
-
+-->
+<ion-item>
+  <ion-thumbnail slot="start">
+    <img [src]="device.icon" [alt]="device.name">
+  </ion-thumbnail>
+  <ion-label>
+    <h2>{{ device.name | uppercase}}</h2>
+    <p>{{ device.location }}</p>
+  </ion-label>
+  <ion-button [routerLink]="['/devices', device.id]" fill="outline" slot="end">Más</ion-button>
+</ion-item>

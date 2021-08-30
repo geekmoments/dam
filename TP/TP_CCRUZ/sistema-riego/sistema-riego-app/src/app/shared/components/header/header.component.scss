@@ -1,10 +1,4 @@
-
-nav > a {
-  padding: 5px;
-  text-decoration: none;
-
+.my-custom-menu {
+  --width: 500px;
 }
 
-nav > a.active{
-  background-color: #ff5e5e;
-}

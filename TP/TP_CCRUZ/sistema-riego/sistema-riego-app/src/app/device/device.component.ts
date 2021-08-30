@@ -3,13 +3,11 @@ import {
   EventEmitter,
   Input,
   Output,
-  OnChanges,
-  SimpleChanges,
   OnInit,
   DoCheck,
   OnDestroy
-} from '@angular/core'
-import {Device} from "../devices/device.model";
+} from '@angular/core';
+import {Device} from '../devices/device.model';
 
 
 
@@ -43,11 +41,11 @@ export class DeviceComponent implements DoCheck, OnInit,OnDestroy{
   }
 
   ngDoCheck(){
-    console.log('4 ngDocheck')
+    console.log('4 ngDocheck');
   }
 
   ngOnDestroy(){
-    console.log('5 ng OnDestroy')
+    console.log('5 ng OnDestroy');
   }
 
   enterDevice() {
