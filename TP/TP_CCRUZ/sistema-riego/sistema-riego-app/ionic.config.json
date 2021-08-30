@@ -1,0 +1,7 @@
+{
+  "name": "sistema-riego-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
