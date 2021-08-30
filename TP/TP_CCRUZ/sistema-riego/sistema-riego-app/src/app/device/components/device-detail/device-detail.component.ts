@@ -3,7 +3,7 @@ import {ActivatedRoute,Params} from '@angular/router';
 import {DevicesService} from '../../../core/services/devices/devices.service';
 import {Device} from '../../../core/models/device.model';
 
-@Component({
+ @Component({
   selector: 'app-device-detail',
   templateUrl: './device-detail.component.html',
   styleUrls: ['./device-detail.component.scss']
@@ -29,7 +29,7 @@ export class DeviceDetailComponent implements OnInit {
         });
   }
   createDevice(){
-     const newDevice:Device = {
+     const newDevice: Device = {
        id:'5',
        name:'newDevice',
        location:'somewhere',
@@ -39,7 +39,7 @@ export class DeviceDetailComponent implements OnInit {
      };
     this.devicesService.createDevice(newDevice)
       .subscribe(device=>{
-        //console.log(device)
+        console.log(device);
       });
   }
 }

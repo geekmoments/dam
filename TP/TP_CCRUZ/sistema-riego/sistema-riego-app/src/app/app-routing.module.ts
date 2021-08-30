@@ -25,24 +25,25 @@ const routes: Routes = [
       },
       {
         path: 'devices',
-        component: DevicesComponent
+        //component: DevicesComponent
+        loadChildren: () => import('./device/device.module').then(m => m.DeviceModule)
       },
       {
-        path: 'devices/:id',
-        component: DeviceDetailComponent
+        path: 'demo',
+        //path: 'devices/:id',
+        //component: DeviceDetailComponent
+        loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)
       },
       {
         path: 'contact',
-        component: ContactComponent
+        //component: ContactComponent
+        loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
       }
     ]},
-  {
-    path: 'demo',
-    component: DemoComponent
-  },
+
   {
     path: '**',
-    component: PageNotFoundComponent
+    loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
   }
 ];
 
