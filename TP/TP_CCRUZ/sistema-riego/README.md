@@ -1,27 +1,52 @@
-# SistemaRiego
+# TP Final DAM Sistema de Riego
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+ [Angular CLI](https://github.com/angular/angular-cli) versión 12.1.0.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+/sistema-riego-app Run `ng serve` , `http://localhost:4200/`. .
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
-
+***
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Descripción de estructura de directorios
+***
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+En el directorio *sistema-riego* , esta el proyecto angular en el que se empezó el desarrollo y en el que
+esta basado el proyecto ionic *sistema-riego-app*
 
-## Running end-to-end tests
+## *sistema-riego-app*
+***
+* app
+1. contact
+    * Módulo para campo de contactos del menú
+2. core
+    * Módulo para administrar servicios(get,post) y modelos(device)
+3. demo
+    * Módulo para agregar o quitar dispositivos
+4. device
+    * Módulo para describir un dispositivo, listarlo y ver detalles, apartir de device se genera una lista de devices y se selecciona la vista a detall(device-detail)
+5. home
+    * Home pantalla de inicio o bienvenida contiene el banner y estructura del home.
+  
+6. layaut
+    *  administra los templates html
+7. page-not-found
+    *  Módulo para vista en caso de error de url
+8. shared
+    * Módulo para administrar componentes compartirdos como templates:
+      * footer
+      * header
+    * directives y pipes
+### Paquetes configurados con ionic capacitor
+* android
+* ios
+***
+## Consideraciones
+***
+> Las consultas fueron probadas con un servicio gratuito donde se almacenó paquetes json.
+> el url_api esta ocnfigurado en enviroments.ts 
+> https://612cc880ab461c00178b5eb6.mockapi.io/devices/devices.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
