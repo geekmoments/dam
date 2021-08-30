@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">TP_SR_APP</string>
+    <string name="title_activity_main">TP_SR_APP</string>
+    <string name="package_name">fiuba.ceiot.dam.com</string>
+    <string name="custom_url_scheme">fiuba.ceiot.dam.com</string>
+</resources>

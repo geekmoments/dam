@@ -1,0 +1,6 @@
+{
+	"appId": "fiuba.ceiot.dam.com",
+	"appName": "TP_SR_APP",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
