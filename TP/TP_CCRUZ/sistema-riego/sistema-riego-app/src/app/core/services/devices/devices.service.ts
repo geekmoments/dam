@@ -1,49 +1,23 @@
 import { Injectable } from '@angular/core';
-import {Device} from "../../../device/components/devices/device.model";
+import { HttpClient} from '@angular/common/http';
+import {Device} from '../../models/device.model';
+import {environment} from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DevicesService {
 
-  devices:Device[] =[
-    { id:'1',
-      name: "Sensor 1" ,
-      location:"Patio" ,
-      electrovalvulaId:1,
-      icon: "image address",
-      description:"this divice is for..."
-    },
-    { id:'2',
-      name:"Sensor 2" ,
-      location:"Cocina" ,
-      electrovalvulaId:2,
-      icon: "image address",
-      description:"this divice is for..."
-    },
-    { id:'3',
-      name:"Sensor 3",
-      location:"Jardin Delantero",
-      electrovalvulaId:3,
-      icon: "image address",
-      description:"this divice is for..."
-    },
-    { id:'4',
-      name:"Sensor 4",
-      location:"Living",
-      electrovalvulaId:4,
-      icon: "image address",
-      description:"this divice is for..."
-    }
-
-  ]
-  constructor() { }
+  constructor(private  http: HttpClient) { }
 
   getAllDevices(){
-    return this.devices;
+    return this.http.get<Device[]>(environment.url_api);
   }
-  getDevice(id:string){
-    return this.devices.find(item=> id === item.id);
+  getDevice(id: string){
+    return this.http.get<Device>(`${environment.url_api}${id}`);
+    //return this.devices.find(item=> id === item.id);
   }
-
+  createDevice(device:Device){
+    return this.http.post(`${environment.url_api}`,device);
+  }
 }

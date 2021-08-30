@@ -7,7 +7,7 @@ import {
   DoCheck,
   OnDestroy
 } from '@angular/core';
-import {Device} from '../devices/device.model';
+import {Device} from '../../../core/models/device.model';
 
 
 

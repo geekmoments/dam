@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Device} from './device.model';
+import {DevicesService} from '../../../core/services/devices/devices.service';
+import {Device} from '../../../core/models/device.model';
 
 @Component({
   selector: 'app-devices',
@@ -7,49 +8,23 @@ import {Device} from './device.model';
   styleUrls: ['./devices.component.scss']
 })
 export class DevicesComponent implements OnInit {
-
-  devices: Device[] =[
-    { id:'1',
-      name: 'Sensor 1' ,
-      location:'Patio' ,
-      electrovalvulaId:1,
-      icon: 'assets/img/imagen1.png',
-      description:'this divice is for...'
-    },
-
-    { id:'2',
-      name:'Sensor 2' ,
-      location:'Cocina' ,
-      electrovalvulaId:2,
-      icon: 'assets/img/imagen2.png',
-      description:'this divice is for...'
-
-
-    },
-    { id:'3',
-      name:'Sensor 3',
-      location:'Jardin Delantero',
-      electrovalvulaId:3,
-      icon: 'assets/img/imagen1.png',
-      description:'this divice is for...'
-
-    },
-    { id:'4',
-      name:'Sensor 4',
-      location:'Living',
-      electrovalvulaId:4,
-      icon: 'assets/img/imagen2.png',
-      description:'this divice is for...'
-    }
-
-  ];
-  constructor() { }
+  devices: Device[]=[];
+  constructor(
+    private devicesService: DevicesService
+  ) { }
 
   ngOnInit(): void {
+    this.fetchDevices();
   }
   clickDevice(id: number){
     console.log('Device ID');
     console.log(id);
+  }
+  fetchDevices(){
+    this.devicesService.getAllDevices()
+      .subscribe(devices=>{
+        this.devices = devices;
+      });
   }
 
 }

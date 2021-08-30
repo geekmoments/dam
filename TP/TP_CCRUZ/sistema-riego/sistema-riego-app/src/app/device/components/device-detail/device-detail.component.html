@@ -1,14 +1,15 @@
 
 <div>
-  <img [src]="Device.icon" alt="Noicon">
+  <img [src]="device.icon" alt="Noicon">
 </div>
 
 <div>
   <ul>
-    <li>Nombre:{{Device.name}}</li>
-    <li>Ubicación:{{Device.location}}</li>
-    <li>Electrovalvula:{{Device.electrovalvulaId}}</li>
+    <li>Nombre:{{device.name}}</li>
+    <li>Ubicación:{{device.location}}</li>
+    <li>Electrovalvula:{{device.electrovalvulaId}}</li>
   </ul>
-  <p>Descripción:{{ Device.description}}</p>
+  <p>Descripción:{{ device.description}}</p>
 
 </div>
+<butto (click)="createDevice()">Crear</butto>
